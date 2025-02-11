@@ -18,6 +18,7 @@ export default function HolidaySection() {
           display: "flex",
           flexDirection: { xs: "column", sm: "column", md: "row" },
           justifyContent: "space-between",
+          gap: { md: "20px", lg: "0px" },
           alignItems: "center",
           mt: { xs: "-1px", sm: "-10px", md: "-60px", lg: "-100px" },
           position: "relative",
