@@ -90,9 +90,13 @@ export default function HolidaySection() {
             tour package. So it is also mandatory for you, besides enjoying
             Komodo tourism on Komodo Island, you also have to taste the marine
             tourism. The beautiful waters of Komodo will make you meet many
-            travelers from other countries.
+            travelers from other countries. You will be amazed if you take part
+            in this sailing Komodo island tour package. So it is also mandatory
+            for you, besides enjoying Komodo tourism on Komodo Island, you also
+            have to taste the marine tourism. The beautiful waters of Komodo
+            will make you meet many travelers from other countries.
           </Typography>
-          <Link href="/more-information">
+          <Link href="/">
             <Typography
               sx={{
                 color: "#ffc178",
@@ -104,7 +108,7 @@ export default function HolidaySection() {
                 gap: "10px",
               }}
             >
-              read more
+              read less
               <Image src={Arrow} alt="arrow" height={15} />
             </Typography>
           </Link>

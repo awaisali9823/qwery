@@ -1,3 +1,4 @@
+"use client";
 import { Box, TextField, Typography } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuTwoToneIcon from "@mui/icons-material/MenuTwoTone";
@@ -6,6 +7,9 @@ import Logo from "@/_assets/svgs/Logo.svg";
 import Link from "next/link";
 
 export default function NavBar() {
+  function handleChange(e) {
+    console.log("Search Value: ", e.target.value);
+  }
   return (
     <Box
       sx={{
@@ -21,7 +25,7 @@ export default function NavBar() {
           width: { xs: "48px", sm: "64px", md: "80px", lg: "96px" },
         }}
       >
-        <Link href="">
+        <Link href="/">
           <Image
             src={Logo}
             alt="logo"
@@ -48,8 +52,8 @@ export default function NavBar() {
         }}
       >
         <Link href="">Information</Link>
-        <Link href="">About Us</Link>
-        <Link href="">Culture</Link>
+        <Link href="about-us">About Us</Link>
+        <Link href="culture">Culture</Link>
       </Box>
       {/* below code copied from chatgpt */}
       <Box
@@ -62,6 +66,7 @@ export default function NavBar() {
         <TextField
           placeholder="Search"
           variant="outlined"
+          onChange={handleChange}
           sx={{
             width: { sm: "100px", md: "125px", lg: "150px" },
             // color: "#fff",

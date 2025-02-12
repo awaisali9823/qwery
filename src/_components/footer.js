@@ -5,8 +5,21 @@ import Facebook from "@/_assets/svgs/Facebook.svg";
 import Instagram from "@/_assets/svgs/instagram.svg";
 import Twitter from "@/_assets/svgs/twitter.svg";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function FooterSection() {
+  const [emailAddress, setEmailAddress] = useState("");
+  const [error, setError] = useState("");
+  function showEmail() {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailPattern.test(emailAddress)) {
+      setError("Please enter a valid email address.");
+    } else {
+      setError("");
+      console.log(emailAddress);
+      setEmailAddress("");
+    }
+  }
   return (
     <Box
       sx={{
@@ -108,6 +121,9 @@ export default function FooterSection() {
             <TextField
               type="email"
               placeholder="Email"
+              value={emailAddress}
+              onChange={(e) => setEmailAddress(e.target.value)}
+              required
               InputProps={{
                 disableUnderline: true, // Removes MUI default underline
                 style: { color: "#fff" },
@@ -130,7 +146,10 @@ export default function FooterSection() {
                 },
               }}
             />
+            {error && <Typography sx={{ color: "red" }}>{error}</Typography>}
+
             <Button
+              onClick={showEmail}
               sx={{
                 backgroundColor: "#ffa343",
                 color: "#000",

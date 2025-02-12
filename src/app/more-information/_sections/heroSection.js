@@ -8,7 +8,7 @@ import Twitter from "@/_assets/svgs/twitter.svg";
 import Arrow from "@/_assets/svgs/down-arrow.svg";
 import Image from "next/image";
 
-export default function Hero({ scrollToSlider }) {
+export default function Hero() {
   return (
     <Box
       sx={{
@@ -79,24 +79,24 @@ export default function Hero({ scrollToSlider }) {
                 Wonderful Indonesia
               </Typography>
             </Typography>
-            <Typography
-              onClick={scrollToSlider}
-              sx={{
-                color: "#fff",
-                fontSize: { xs: "10px", sm: "14px", md: "18px" },
-                fontWeight: "400",
-                mt: { xs: "15px", sm: "30px", md: "40px" },
-                float: "center",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "10px",
-                cursor: "pointer",
-              }}
-            >
-              Scroll down
-              <Image src={Arrow} alt="arrow" height={15} />
-            </Typography>
+            <Link href="">
+              <Typography
+                sx={{
+                  color: "#fff",
+                  fontSize: { xs: "10px", sm: "14px", md: "18px" },
+                  fontWeight: "400",
+                  mt: { xs: "15px", sm: "30px", md: "40px" },
+                  float: "center",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "10px",
+                }}
+              >
+                Scroll down
+                <Image src={Arrow} alt="arrow" height={15} />
+              </Typography>
+            </Link>
           </Box>
         </Box>
         <Box

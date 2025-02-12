@@ -122,6 +122,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Image from "next/image";
 import Steady from "@/_assets/pngs/steady.png";
+import { forwardRef } from "react";
 
 const slides = [
   {
@@ -150,7 +151,7 @@ const slides = [
   },
 ];
 
-export default function SliderSection() {
+const SliderSection = forwardRef((props, ref) => {
   var settings = {
     dots: false,
     infinite: true,
@@ -161,6 +162,7 @@ export default function SliderSection() {
 
   return (
     <Box
+      ref={ref}
       sx={{
         p: {
           xs: "25px 30px",
@@ -262,4 +264,6 @@ export default function SliderSection() {
       </Slider>
     </Box>
   );
-}
+});
+SliderSection.displayName = "SliderSection";
+export default SliderSection;
