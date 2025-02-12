@@ -154,7 +154,7 @@ export default function SliderSection() {
   var settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -178,6 +178,9 @@ export default function SliderSection() {
           right: { xs: "10px", sm: "20px" },
           zIndex: 2,
         },
+        maxWidth: { xl: "1535px" },
+        width: { xl: "100%" },
+        margin: { xl: "auto" },
       }}
     >
       <Slider {...settings}>

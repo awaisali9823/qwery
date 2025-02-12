@@ -2,6 +2,8 @@ import { Box } from "@mui/material";
 import Hero from "./_sections/heroSection";
 import HolidaySection from "./_sections/hoildaySection";
 import SliderSection from "./_sections/sliderSection";
+import CultureSection from "./_sections/cultureSection";
+import FooterSection from "@/_components/footer";
 
 export default function HomePage() {
   return (
@@ -9,6 +11,8 @@ export default function HomePage() {
       <Hero />
       <HolidaySection />
       <SliderSection />
+      <CultureSection />
+      <FooterSection />
     </Box>
   );
 }

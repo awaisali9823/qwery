@@ -7,10 +7,12 @@ export default function HolidaySection() {
   return (
     <Box
       sx={{
-        pl: { xs: "20px", sm: "40px", md: "60", lg: "120px" },
-        pr: { xs: "20px", sm: "40px", md: "60", lg: "120px" },
+        pl: { xs: "30px", sm: "40px", md: "60", lg: "120px" },
+        pr: { xs: "30px", sm: "40px", md: "60", lg: "120px" },
         pb: "20px",
-        backgroundColor: "#000",
+        maxWidth: { xl: "1535px" },
+        width: { xl: "100%" },
+        margin: { xl: "auto" },
       }}
     >
       <Box
